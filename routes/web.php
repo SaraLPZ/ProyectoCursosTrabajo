@@ -17,7 +17,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::inertia('dashboard', 'Dashboard')->name('dashboard');
     Route::get('/cursos', [CursoController::class, 'index'])->name('cursos');
     Route::inertia('calendario', 'Calendario', [
-    'cursos' => Curso::all()
+    //'cursos' => Curso::all()
     ])->name('calendario');
 
     
